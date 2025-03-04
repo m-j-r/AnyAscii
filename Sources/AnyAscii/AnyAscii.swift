@@ -3,11 +3,11 @@
 
 import Foundation
 
-class AnyAscii {
+public class AnyAscii {
     
     nonisolated(unsafe) private static var cache: [String: [String]] = [:]
     
-    static func transliterate(from input: String) -> String  {
+    public static func transliterate(from input: String) -> String  {
         var result: String = ""
         for scalar in input.unicodeScalars {
             if scalar.isASCII {
